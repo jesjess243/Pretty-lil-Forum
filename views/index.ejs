@@ -1,0 +1,11 @@
+<!-- index.ejs -->
+<html>
+    <body>
+        <% for (let i = 0; i < messages.length; i++) { %>
+            <h3> <%= messages[i].user %> </h3>
+            <h5> <%= messages[i].added %> </h5>
+            <a href="<%= i %>">Share</a>
+            <p> <%= messages[i].text %> </p>
+        <% } %>
+    </body>
+</html>
