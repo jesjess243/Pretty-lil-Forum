@@ -15,7 +15,7 @@ const messages = [
 const indexRouter = Router();
 
 indexRouter.get("/", (req, res) => {
-    res.render("index", {messages: messages});
+    res.render("index", { title: "Pretty Lil Forum", messages: messages});
 });
 
 indexRouter.get("/new", (req, res) => {
@@ -31,6 +31,10 @@ indexRouter.post("/new", (req, res) => {
 
 indexRouter.get("/:messageId", (req, res) => {
     console.log(req.params);
+    res.render("index", {title: "Pretty Lil Forum", messages: messages.slice(req.params.messageId, req.params.messageId + 1)});
+});
+
+module.exports = indexRouter;
     res.render("index", {messages: messages.slice(req.params.messageId, req.params.messageId + 1)});
 });
 
