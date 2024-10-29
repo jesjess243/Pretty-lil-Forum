@@ -5,4 +5,44 @@ html {
 
 body {
     font-family: 'Open Sans', 'Noto Sans', 'Lato', 'Roboto';
+    background-color: #120709;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1.1rem;
+}
+
+.message-container {
+    background-color: #36161c;
+    margin: 1rem;
+}
+
+.message-container h3 {
+    margin-top: 0rem;
+    margin-bottom: 0;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    background-color: #481d25;
+}
+
+.message-container h6 {
+    background-color: #5b242f;
+    margin-top: 0rem;
+    padding-left: 0.5rem;
+    padding-top: 0.25rem;
+}
+
+.message-container p {
+    font-size: 0.85rem;
+    margin-left: 0.25rem;
+    margin-top: -1rem;
+}
+
+.message-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+.message-container a:hover {
+    background-color: #7f3241;
 }
