@@ -1,0 +1,19 @@
+{
+  "name": "pretty-lil-forum",
+  "version": "1.0.0",
+  "description": "A full stack message board project created with the guidance of The Odin Project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesjess243/Pretty-Lil-Forum.git"
+  },
+  "author": "Jesse",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jesjess243/Pretty-Lil-Forum/issues"
+  },
+  "homepage": "https://github.com/jesjess243/Pretty-Lil-Forum#readme"
+}
