@@ -35,5 +35,3 @@ indexRouter.get("/:messageId", (req, res) => {
 });
 
 module.exports = indexRouter;
-
-module.exports = indexRouter;
