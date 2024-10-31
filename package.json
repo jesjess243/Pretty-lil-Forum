@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A full stack message board project created with the guidance of The Odin Project.",
   "main": "app.js",
+  "dependencies": {
+    "express": "4.21.1"
+  },
   "scripts": {
     "test": "node app.js"
   },

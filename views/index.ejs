@@ -1,14 +1,18 @@
 <!-- index.ejs -->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <title><%= title %></title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />    
     </head>
     <body>
         <% for (let i = 0; i < messages.length; i++) { %>
-            <h3> <%= messages[i].user %> </h3>
-            <h5> <%= messages[i].added %> </h5>
-            <a href="<%= i %>">Share</a>
-            <p> <%= messages[i].text %> </p>
+            <div class="message-container">
+                <h3 class="message-title"> <%= messages[i].user %> </h3>
+                <h6> <%= messages[i].added %> </h6>
+                <p> <%= messages[i].text %> </p>
+                <a href="<%= i %>">🔗</a>
+            </div>
         <% } %>
     </body>
 </html>

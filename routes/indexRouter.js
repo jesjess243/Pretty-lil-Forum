@@ -35,7 +35,3 @@ indexRouter.get("/:messageId", (req, res) => {
 });
 
 module.exports = indexRouter;
-    res.render("index", {messages: messages.slice(req.params.messageId, req.params.messageId + 1)});
-});
-
-module.exports = indexRouter;
