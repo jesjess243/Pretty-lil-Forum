@@ -4,7 +4,9 @@
   "description": "A full stack message board project created with the guidance of The Odin Project.",
   "main": "app.js",
   "dependencies": {
-    "express": "4.21.1"
+    "ejs": "^3.1.10",
+    "express": "4.21.1",
+    "vue": "^3.5.12"
   },
   "scripts": {
     "test": "node app.js"
