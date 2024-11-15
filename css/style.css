@@ -5,11 +5,34 @@ html {
 
 body {
     font-family: 'Open Sans', 'Noto Sans', 'Lato', 'Roboto';
+    color: white;
     background-color: #120709;
     display: flex;
     flex-flow: column nowrap;
     margin: 1.1rem;
 }
+
+.navbar {
+    position: relative;
+    z-index: 5;
+}
+
+.navbar ul {
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  .navbar ul li {
+    float: left;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
 
 .message-container {
     background-color: #36161c;
@@ -45,4 +68,8 @@ body {
 
 .message-container a:hover {
     background-color: #7f3241;
+}
+
+sub {
+    align-self: center;
 }
