@@ -1,25 +1,21 @@
 const { Router } = require("express");
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date()
-    }
-];
-
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
+const indexController = require("../controllers/indexController");
+
+indexRouter.get("/", indexController.msgsGet);
+indexRouter.get("/new", indexController.msgsNewGet);
+indexRouter.get("/:messageId", indexController.msgsGet);
+
+
+indexRouter.post("/new", indexController.msgsNewPost);
+
+/*indexRouter.get("/", (req, res) => {
     res.render("index", { title: "Pretty Lil Forum", messages: messages});
 });
 
 indexRouter.get("/new", (req, res) => {
-    res.render("form");
+    res.render("form", {title: "New Post"});
 });
 
 indexRouter.post("/new", (req, res) => {
@@ -32,6 +28,6 @@ indexRouter.post("/new", (req, res) => {
 indexRouter.get("/:messageId", (req, res) => {
     console.log(req.params);
     res.render("index", {title: "Pretty Lil Forum", messages: messages.slice(req.params.messageId, req.params.messageId + 1)});
-});
+});*/
 
 module.exports = indexRouter;
