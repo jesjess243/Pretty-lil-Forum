@@ -6,13 +6,22 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />    
     </head>
     <body>
+        <div class="navbar">
+            <ul>
+                <li><button id="dark-button">
+                    Turn on the Lights 
+                </button></li>
+            </ul>
+        </div>
+        <h1>Pretty Lil Forum</h1>
         <% for (let i = 0; i < messages.length; i++) { %>
             <div class="message-container">
-                <h3 class="message-title"> <%= messages[i].user %> </h3>
+                <h3 class="message-title"> <%= messages[i].name %> </h3>
                 <h6> <%= messages[i].added %> </h6>
-                <p> <%= messages[i].text %> </p>
-                <a href="<%= i %>">🔗</a>
+                <p> <%= messages[i].value %> </p>
+                <a href="<%= (i+1) %>">🔗</a>
             </div>
         <% } %>
+        <sub>Created by Jesse Herring</sub>
     </body>
 </html>
