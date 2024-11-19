@@ -58,6 +58,10 @@ h2 {
     margin-bottom: -1rem;
 }
 
+.message-container time:focus {
+    outline: 1rem;
+}
+
 .message-container p {
     font-size: 0.85rem;
     margin-left: 0.25rem;
