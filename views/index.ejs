@@ -10,22 +10,31 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />    
     </head>
     <body>
-        <div class="navbar">
+        <!--<nav>
             <ul>
-                <li><button id="dark-button">
+                <li><button>
                     Turn on the Lights 
                 </button></li>
             </ul>
-        </div>
+        </nav>-->
         <h1>Pretty Lil Forum</h1>
+        <header>
+            <h2>Messages</h2>
+        </header>
+
+        <main>
         <% for (let i = 0; i < messages.length; i++) { %>
-            <div class="message-container">
-                <h3 class="message-title"> <%= messages[i].name %> </h3>
-                <h6> <%= messages[i].added %> </h6>
+            <article class="message-container">
+                <header>
+                    <h3 class="message-title"> <%= messages[i].name %> </h3>
+                    <time> <%= messages[i].added %> </time>
+                </header>
                 <p> <%= messages[i].value %> </p>
-                <a href="<%= (i+1) %>">🔗</a>
-            </div>
+                <a href="<%= (i+1) %>"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
+            </article>
         <% } %>
-        <sub>Created by Jesse Herring</sub>
+        </main>
+
+        <footer>Created by Jesse Herring</footer>
     </body>
 </html>

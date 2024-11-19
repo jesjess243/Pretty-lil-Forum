@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', 'Noto Sans', 'Lato', 'Roboto';
+    font-family: 'Open Sans', 'Roboto';
     color: white;
     background-color: #120709;
     display: flex;
@@ -12,12 +12,12 @@ body {
     margin: 1.1rem;
 }
 
-.navbar {
+nav {
     position: relative;
     z-index: 5;
 }
 
-.navbar ul {
+nav ul {
     display: flex;
     flex-flow: row;
     list-style-type: none;
@@ -26,17 +26,21 @@ body {
     top: 0;
     width: 100%;
     margin-bottom: auto;
-  }
+}
 
-  .navbar ul li {
+nav ul li {
     float: left;
     margin-right: 0.5rem;
     font-size: 0.9rem;
-  }
+}
+
+h2 {
+    margin-bottom: -0.5rem;
+}
 
 .message-container {
     background-color: #36161c;
-    margin: 1rem;
+    margin-top: 1.0rem;
 }
 
 .message-container h3 {
@@ -47,17 +51,18 @@ body {
     background-color: #481d25;
 }
 
-.message-container h6 {
-    background-color: #5b242f;
+.message-container time {
     margin-top: 0rem;
     padding-left: 0.5rem;
-    padding-top: 0.25rem;
+    font-size: 0.80rem;
+    margin-bottom: -1rem;
 }
 
 .message-container p {
     font-size: 0.85rem;
     margin-left: 0.25rem;
-    margin-top: -1rem;
+    margin-bottom: -0.005rem;
+    margin-top: -0.03125rem;
 }
 
 .message-container a {
@@ -66,10 +71,7 @@ body {
     font-size: 0.75rem;
 }
 
-.message-container a:hover {
-    background-color: #7f3241;
-}
-
-sub {
+footer {
     align-self: center;
+    margin-top: 0.5rem;
 }
