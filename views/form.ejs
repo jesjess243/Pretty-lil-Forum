@@ -1,17 +1,37 @@
 <!-- form.ejs -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= title %></title>
         <link rel="stylesheet" type="text/css" href="css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css" />    
     </head>
     <body>
+        <!--<nav>
+            <ul>
+                <li><button>
+                    Turn on the Lights 
+                </button></li>
+            </ul>
+        </nav>-->
         <h1>Pretty Lil Forum</h1>
-        <h2>New Message</h2>
-        <form method="POST" action="/new">
-            <input type="text" name="messageUser">
-            <input type="text" name="messageText">
-            <button type="submit">Submit</button>
-        </form>
+
+        <main>
+            <header>
+                <h2>New Message</h2>
+            </header>
+            <form method="POST" action="/new">
+                <label for="messageUser">Name</label>
+                <input type="text" name="messageUser" class="message-user" size="20">
+                <br>
+                <label for="messageText">Message</label>
+                <input type="text" name="messageText" class="message-body" size="50"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
+        <footer>Created by Jesse Herring</footer>
     </body>
 </html>
