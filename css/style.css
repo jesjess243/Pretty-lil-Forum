@@ -78,18 +78,18 @@ header {
     font-size: 0.75rem;
 }
 
-.message-body {
-    padding-bottom:5rem;
-}
-
 form {
     display: flex;
     flex-flow: column;
 
 }
 
-.message-user {
+#message-username {
     width: 10rem;
+}
+
+#message-body {
+    padding-bottom:5rem;
 }
 
 form button {
