@@ -48,28 +48,23 @@ header {
 
 .message-container h3 {
     margin-top: 0rem;
-    margin-bottom: 0;
+    margin-bottom: 0rem;
     padding-top: 0.25rem;
     padding-left: 0.25rem;
     background-color: #481d25;
 }
 
 .message-container time {
-    margin-top: 0rem;
+    margin-top: 0;
     padding-left: 0.5rem;
     font-size: 0.80rem;
-    margin-bottom: -1rem;
-}
-
-.message-container time:focus {
-    outline: 1rem;
 }
 
 .message-container p {
     font-size: 0.85rem;
     margin-left: 0.25rem;
     margin-bottom: -0.005rem;
-    margin-top: -0.03125rem;
+    margin-top: 0.05rem;
 }
 
 .message-container a {
