@@ -8,7 +8,7 @@ async function msgsGet (req, res) {
     
     res.render("index", {
         title: "Pretty Lil Forum",
-        messages: msgs,
+        msgs: msgs,
     });
 };
 

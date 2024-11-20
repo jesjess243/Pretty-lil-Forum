@@ -38,9 +38,12 @@ h2 {
     margin-bottom: -0.5rem;
 }
 
+header {
+    margin-bottom: 1rem;
+}
+
 .message-container {
     background-color: #36161c;
-    margin-top: 1.0rem;
 }
 
 .message-container h3 {
@@ -73,6 +76,24 @@ h2 {
     color: white;
     text-decoration: none;
     font-size: 0.75rem;
+}
+
+.message-body {
+    padding-bottom:5rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.message-user {
+    width: 10rem;
+}
+
+form button {
+    width: 10rem;
 }
 
 footer {

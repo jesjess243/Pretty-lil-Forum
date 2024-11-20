@@ -1,13 +1,12 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= title %></title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />    
     </head>
     <body>
         <!--<nav>
@@ -18,21 +17,21 @@
             </ul>
         </nav>-->
         <h1>Pretty Lil Forum</h1>
-        <header>
-            <h2>Messages</h2>
-        </header>
 
         <main>
-        <% for (let i = 0; i < messages.length; i++) { %>
-            <article class="message-container">
-                <header>
-                    <h3 class="message-title"> <%= messages[i].name %> </h3>
-                    <time> <%= messages[i].added %> </time>
-                </header>
-                <p> <%= messages[i].value %> </p>
-                <a href="<%= (i+1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
-            </article>
-        <% } %>
+            <header>
+                <h2>Messages</h2>
+            </header>
+            <% for (let i = 0; i < msgs.length; i++) { %>
+                <article class="message-container">
+                    <header>
+                        <h3 class="message-title"> <%= msgs[i].name %> </h3>
+                        <time> <%= msgs[i].added %> </time>
+                    </header>
+                    <p> <%= msgs[i].value %> </p>
+                    <a href="messages/<%= (i + 1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
+                </article>
+            <% } %>
         </main>
 
         <footer>Created by Jesse Herring</footer>
