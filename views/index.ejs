@@ -16,7 +16,7 @@
                 </button></li>
             </ul>
         </nav>-->
-        <h1>Pretty Lil Forum</h1>
+        <header><h1>Pretty Lil Forum</h1></header>
 
         <main>
             <header>
@@ -24,12 +24,15 @@
             </header>
             <% for (let i = 0; i < msgs.length; i++) { %>
                 <article class="message-container">
-                    <h3 class="message-title"> <%= msgs[i].name %> </h3>
-                    <details>
-                        <time> <%= msgs[i].added %> </time>
+                    <details open>
+                        <summary>
+                            <%= msgs[i].name %> <time> <%= msgs[i].added %> </time>
+                        </summary>
                         <p> <%= msgs[i].value %> </p>
                     </details>
-                    <a href="messages/<%= (i + 1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
+                    <footer>
+                        <a href="messages/<%= (i + 1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
+                    </footer>
                 </article>
             <% } %>
         </main>
