@@ -16,18 +16,19 @@
                 </button></li>
             </ul>
         </nav>-->
-        <h1>Pretty Lil Forum</h1>
+        <header><h1>Pretty Lil Forum</h1></header>
 
         <main>
             <header>
                 <h2>New Message</h2>
             </header>
             <form method="POST" action="/new">
-                <label for="message-username">Name</label>
-                <input type="text" id="message-username" size="20">
+                <p>Fields with asterisk <sup>*</sup> are required.</p>
+                <label for="message-username">Name <sup>*</sup></label>
+                <input type="text" id="message-username" pattern="\w+" size="20" required>
                 <br>
-                <label for="message-body">Message</label>
-                <input type="text" id="message-body" size="50"><br>
+                <label for="message-body">Message <sup>*</sup></label>
+                <input type="text" id="message-body" size="50" required><br>
                 <button type="submit">Submit</button>
             </form>
         </main>

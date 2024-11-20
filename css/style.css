@@ -114,6 +114,10 @@ form {
     flex-flow: column;
 }
 
+label {
+    padding-bottom: 0.2rem;
+}
+
 #message-username {
     width: 10rem;
 }
