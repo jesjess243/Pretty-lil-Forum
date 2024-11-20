@@ -1,16 +1,51 @@
+
+/* set web font */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Semibold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Bold.ttf");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-SemiboldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
 html {
     height: 100%;
     width: 100%;
 }
 
 body {
-    font-family: 'Open Sans', 'Roboto';
-    color: white;
+    font-family: 'Open Sans', 'Roboto', 'Verdana', 'Arial'; /* edge cases for font files not found */
+    color: white; /* dark mode is default */
     background-color: #120709;
     display: flex;
     flex-flow: column nowrap;
     margin: 1.1rem;
 }
+
+/* TODO: Add the nav bar */
 
 nav {
     position: relative;
@@ -34,13 +69,11 @@ nav ul li {
     font-size: 0.9rem;
 }
 
-h2 {
+main > header {
     margin-bottom: -0.5rem;
 }
 
-main > header {
-    margin-bottom: 1rem;
-}
+/* /index */
 
 .message-container {
     background-color: #36161c;
@@ -74,10 +107,11 @@ main > header {
     font-size: 0.75rem;
 }
 
+/* /new */
+
 form {
     display: flex;
     flex-flow: column;
-
 }
 
 #message-username {
@@ -85,10 +119,10 @@ form {
 }
 
 #message-body {
-    padding-bottom:5rem;
+    padding-bottom: 5rem;
 }
 
-form button {
+form > button {
     width: 10rem;
 }
 
