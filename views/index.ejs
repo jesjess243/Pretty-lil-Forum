@@ -25,8 +25,10 @@
             <% for (let i = 0; i < msgs.length; i++) { %>
                 <article class="message-container">
                     <h3 class="message-title"> <%= msgs[i].name %> </h3>
-                    <time> <%= msgs[i].added %> </time>
-                    <p> <%= msgs[i].value %> </p>
+                    <details>
+                        <time> <%= msgs[i].added %> </time>
+                        <p> <%= msgs[i].value %> </p>
+                    </details>
                     <a href="messages/<%= (i + 1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
                 </article>
             <% } %>
