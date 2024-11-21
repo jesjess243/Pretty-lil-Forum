@@ -10,7 +10,7 @@ async function getAllMsgs(msgId) {
 };
 
 async function insertMsg(msg) {
-    console.log(msg);
+    //console.log(msg);
     await pool.query("INSERT INTO messages (name, value, added) VALUES ($1, $2, $3)", [msg['message-username'], msg['message-body'], new Date()]);
 };
 
