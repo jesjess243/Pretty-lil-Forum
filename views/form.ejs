@@ -23,10 +23,10 @@
             <form method="POST" action="/new">
                 <p>Fields with asterisk <sup>*</sup> are required.</p>
                 <label for="message-username">Name <sup>*</sup></label>
-                <input type="text" id="message-username" pattern="\w+" size="20" required>
+                <input type="text" id="message-username" name="message-username" size="20" required>
                 <br>
                 <label for="message-body">Message <sup>*</sup></label>
-                <input type="text" id="message-body" size="50" required><br>
+                <textarea id="message-body" name="message-body" size="50" required></textarea><br>
                 <button type="submit">Submit</button>
             </form>
         </main>
