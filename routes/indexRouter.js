@@ -5,8 +5,7 @@ const indexController = require("../controllers/indexController");
 
 indexRouter.get("/", indexController.msgsGet);
 indexRouter.get("/new", indexController.msgsNewGet);
-indexRouter.get("/messages/:messageId", indexController.msgsGet);
-
+indexRouter.get("/:messageId", indexController.msgsGet);
 
 indexRouter.post("/new", indexController.msgsNewPost);
 

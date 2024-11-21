@@ -1,12 +1,16 @@
 // app.js: root
 const env = require("dotenv").config();
 const express = require("express");
+const favicon = require('serve-favicon');
 const path = require("node:path");
 const pg = require("pg");
 
 const app = express();
-const indexRouter = require("./routes/indexRouter");
 
+// prevent GET for /favicon.ico
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
+const indexRouter = require("./routes/indexRouter");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs"); // express.js
