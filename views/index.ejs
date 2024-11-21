@@ -25,7 +25,7 @@
                 <article class="message-container">
                     <details open>
                         <summary>
-                            <%= msgs[i].name %> <time> <%= msgs[i].added %> </time>
+                            <%= msgs[i].name %> <time datetime=" <%= msgs[i].added %>"> <%= (msgs[i].added).toDateString() %> </time>
                         </summary>
                         <p> <%= msgs[i].value %> </p>
                     </details>
