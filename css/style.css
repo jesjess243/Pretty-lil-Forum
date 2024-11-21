@@ -1,40 +1,119 @@
+/* css/styles.css */
+
+/* set web font */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Semibold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Bold.ttf");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open\ Sans/OpenSans-SemiboldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
 html {
     height: 100%;
     width: 100%;
 }
 
 body {
-    font-family: 'Open Sans', 'Noto Sans', 'Lato', 'Roboto';
+    font-family: 'Open Sans', 'Roboto', 'Verdana', 'Arial'; /* edge cases for font files not found */
+    color: white; /* dark mode is default */
     background-color: #120709;
-    display: flex;
-    flex-flow: column nowrap;
     margin: 1.1rem;
 }
 
-.message-container {
-    background-color: #36161c;
-    margin: 1rem;
+.navbar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.message-container h3 {
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    position: relative;
+    z-index: 5;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+nav ul li {
+    float: left;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main > header {
+    margin-bottom: -0.5rem;
+}
+
+/* /index */
+
+.message-container {
+    background-color: #36161c;
+    flex-flow: column;
+    margin-bottom: 1rem;
+}
+
+.message-container summary {
     margin-top: 0rem;
-    margin-bottom: 0;
+    margin-bottom: 0rem;
     padding-top: 0.25rem;
     padding-left: 0.25rem;
     background-color: #481d25;
 }
 
-.message-container h6 {
-    background-color: #5b242f;
-    margin-top: 0rem;
+.message-container time {
+    margin-top: 0;
     padding-left: 0.5rem;
-    padding-top: 0.25rem;
+    font-size: 0.80rem;
 }
 
 .message-container p {
     font-size: 0.85rem;
     margin-left: 0.25rem;
-    margin-top: -1rem;
+    margin-bottom: -0.005rem;
+    margin-top: 0.05rem;
 }
 
 .message-container a {
@@ -43,6 +122,30 @@ body {
     font-size: 0.75rem;
 }
 
-.message-container a:hover {
-    background-color: #7f3241;
+/* /new */
+
+form {
+    display: flex;
+    flex-flow: column;
+}
+
+label {
+    padding-bottom: 0.2rem;
+}
+
+#message-username {
+    width: 10rem;
+}
+
+#message-body {
+    padding-bottom: 5rem;
+}
+
+form > button {
+    width: 10rem;
+}
+
+body > footer {
+    text-align: center;
+    margin-top: 0.5rem;
 }

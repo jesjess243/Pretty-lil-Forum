@@ -1,18 +1,41 @@
 <!-- index.ejs -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><%= title %></title>
-        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />    
+        <link rel="icon" type="image/x-icon" href="public/favicon.ico">
     </head>
     <body>
-        <% for (let i = 0; i < messages.length; i++) { %>
-            <div class="message-container">
-                <h3 class="message-title"> <%= messages[i].user %> </h3>
-                <h6> <%= messages[i].added %> </h6>
-                <p> <%= messages[i].text %> </p>
-                <a href="<%= i %>">🔗</a>
-            </div>
-        <% } %>
+        <header class="navbar">
+            <a href="/" tabindex="0"><h1>Pretty Lil Forum</h1></a>
+            <nav>
+                <a href="/new" tabindex="0">Create New Post</a>
+            </nav>
+        </header>
+
+        <main>
+            <header>
+                <h2>Messages</h2>
+            </header>
+            <% for (let i = 0; i < msgs.length; i++) { %>
+                <article class="message-container">
+                    <details open>
+                        <summary>
+                            <%= msgs[i].name %> <time datetime=" <%= msgs[i].added %>"> <%= (msgs[i].added).toDateString() %> </time>
+                        </summary>
+                        <p> <%= msgs[i].value %> </p>
+                    </details>
+                    <footer>
+                        <a href=" <%= (i + 1) %>" tabindex="0"><span role="img" aria-label="Share this Post">&#x1F517;</span></a>
+                    </footer>
+                </article>
+            <% } %>
+        </main>
+
+        <footer>Created by Jesse Herring</footer>
     </body>
 </html>

@@ -1,37 +1,13 @@
+// routes/indexRouter.js
 const { Router } = require("express");
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date()
-    }
-];
-
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
-    res.render("index", { title: "Pretty Lil Forum", messages: messages});
-});
+const indexController = require("../controllers/indexController");
 
-indexRouter.get("/new", (req, res) => {
-    res.render("form");
-});
+indexRouter.get("/", indexController.msgsGet);
+indexRouter.get("/new", indexController.msgsNewGet);
+indexRouter.get("/:messageId", indexController.msgsGet);
 
-indexRouter.post("/new", (req, res) => {
-    console.log("Post requested!");
-    messages.push({ text: req.body.messageText, user: req.body.messageUser, added: new Date() });
-    console.log("Pushed!");
-    res.redirect("/");
-});
-
-indexRouter.get("/:messageId", (req, res) => {
-    console.log(req.params);
-    res.render("index", {title: "Pretty Lil Forum", messages: messages.slice(req.params.messageId, req.params.messageId + 1)});
-});
+indexRouter.post("/new", indexController.msgsNewPost);
 
 module.exports = indexRouter;

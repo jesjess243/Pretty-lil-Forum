@@ -4,8 +4,11 @@
   "description": "A full stack message board project created with the guidance of The Odin Project.",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "4.21.1",
+    "pg": "^8.13.1",
+    "serve-favicon": "^2.5.0",
     "vue": "^3.5.12"
   },
   "scripts": {

@@ -1,11 +1,36 @@
 <!-- form.ejs -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />    
+        <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    </head>
     <body>
-        <h2>New Message</h2>
-        <form method="POST" action="/new">
-            <input type="text" name="messageUser">
-            <input type="text" name="messageText">
-            <button>Submit</button>
-        </form>
+        <header class="navbar">
+            <a href="/" tabindex="0"><h1>Pretty Lil Forum</h1></a>
+            <nav>
+                <a href="/new" tabindex="0">Create New Post</a>
+            </nav>
+        </header>
+        <main>
+            <header>
+                <h2>New Message</h2>
+            </header>
+            <form method="POST" action="/new">
+                <p>Fields with asterisk <sup>*</sup> are required.</p>
+                <label for="message-username">Name <sup>*</sup></label>
+                <input type="text" id="message-username" name="message-username" size="20" required>
+                <br>
+                <label for="message-body">Message <sup>*</sup></label>
+                <textarea id="message-body" name="message-body" size="50" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
+        <footer>Created by Jesse Herring</footer>
     </body>
 </html>
