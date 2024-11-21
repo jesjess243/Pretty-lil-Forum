@@ -51,9 +51,9 @@ body {
     gap: 2.5rem;
 }
 
-.navbar a {
-    text-decoration: none;
+a {
     color: white;
+    text-decoration: none;
 }
 
 nav {
@@ -61,21 +61,17 @@ nav {
     z-index: 5;
 }
 
-nav ul {
-    display: flex;
-    flex-flow: row;
-    list-style-type: none;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-bottom: auto;
+nav a {
+    text-decoration: 0.5rem underline transparent;
+    transition: text-decoration 0.25s ease-out 0.1s;     
 }
 
-nav ul li {
-    float: left;
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
+nav > a:hover {
+    text-decoration: 0.5rem underline pink;
+}
+
+nav > a:focus {
+    text-decoration: 0.5rem underline pink;
 }
 
 main {
