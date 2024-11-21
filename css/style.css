@@ -41,12 +41,20 @@ body {
     font-family: 'Open Sans', 'Roboto', 'Verdana', 'Arial'; /* edge cases for font files not found */
     color: white; /* dark mode is default */
     background-color: #120709;
-    display: flex;
-    flex-flow: column nowrap;
     margin: 1.1rem;
 }
 
-/* TODO: Add the nav bar */
+.navbar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
 
 nav {
     position: relative;
@@ -68,6 +76,11 @@ nav ul li {
     float: left;
     margin-right: 0.5rem;
     font-size: 0.9rem;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 main > header {
@@ -132,6 +145,6 @@ form > button {
 }
 
 body > footer {
-    align-self: center;
+    text-align: center;
     margin-top: 0.5rem;
 }
