@@ -2,9 +2,9 @@
 const db = require("../db/queries");
 
 async function msgsGet (req, res) {
-    console.log(req.params.messageId);
+    //console.log(req.params.messageId);
     const msgs = await db.getAllMsgs(req.params.messageId);
-    console.log(msgs);
+    //console.log(msgs);
     
     res.render("index", {
         title: "Pretty Lil Forum",
