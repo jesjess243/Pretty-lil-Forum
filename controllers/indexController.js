@@ -20,7 +20,7 @@ async function msgsNewGet (req, res) {
 
 async function msgsNewPost (req, res) {
     const msg  = req.body;
-    console.log(req.body);
+    //console.log(req.body);
     await db.insertMsg(msg);
     res.redirect("/");
 }
